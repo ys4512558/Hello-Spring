@@ -17,6 +17,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-devtools' //추가 시 서버 재시작 안하고 html을 Recompile만으로 뷰 변경 가능
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//H2 DB를 위한 추가
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'
+
+	//lombok 사용을 위한 implementation
+	//implementation 'org.projectlombok:lombok'
+	//mysql 연동을 위한 implementation
+	//implementation 'mysql:mysql-connector-java:8.0.32'
+	//위처럼 버전 넣어도 되긴하는데 알아서 스프링에 맞는 버전으로 맞춰주기 위해 버전 입력X
+	//implementation 'mysql:mysql-connector-java'
+	//JPA를 위한 implementation
+	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('test') {
